@@ -1,0 +1,26 @@
+CREATE TABLE clothing ( id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, price INTEGER);
+
+INSERT INTO clothing VALUES (1,"shorts",50,15);
+INSERT INTO clothing VALUES (2,"shirts",35,50);
+INSERT INTO clothing VALUES (3,"trousers", 40,45);
+INSERT INTO clothing VALUES (4,"jeans",75,55);
+INSERT INTO clothing VALUES (5, "vests",30,8);
+INSERT INTO clothing VALUES (6, "suits",20,250);
+INSERT INTO clothing VALUES (7, "skirts",60,20);
+INSERT INTO clothing VALUES (8, "tops",100,10);
+INSERT INTO clothing VALUES (9, "dresses",300,29.99);
+INSERT INTO clothing VALUES (10, "knickers",300,5.50);
+INSERT INTO clothing VALUES (11, "belts",70,10.50);
+INSERT INTO clothing VALUES (12, "towels",50,30);
+INSERT INTO clothing VALUES (13, "pyjamas",50,30);
+INSERT INTO clothing VALUES (14, "hats",55,12);
+INSERT INTO clothing VALUES (15, "leggings",70,15);
+
+--items ordered by price
+SELECT * FROM clothing ORDER BY price;
+
+--What how many of the expenisive items are in store?
+SELECT * FROM clothing WHERE price >20 AND quantity <50;
+
+--What is our most expensive item?
+SELECT MAX(price) FROM clothing;
